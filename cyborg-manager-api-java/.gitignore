@@ -5,8 +5,7 @@ target/
 !**/src/test/**
 
 ### Resources ###
-/src/main/resources/
-*.properties
+application.properties
 
 ### STS ###
 .apt_generated
