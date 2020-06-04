@@ -1,0 +1,44 @@
+<!-- ============================================================== -->
+    <!-- Topbar - style you can find in header.scss -->
+    <!-- ============================================================== -->
+    <mat-toolbar color="primary" class="topbar telative">
+        <!-- ============================================================== -->
+        <!-- Logo - style you can find in header.scss -->
+        <!-- ============================================================== -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">                
+                <!-- Logo -->
+                <span fxShow="true" fxShow.gt-xs>                 
+                 <!-- Light Logo -->    
+                 <img src="assets/images/logo-light-color-web.png" class="light-logo" alt="homepage">
+                </span> </a>
+        </div>
+        <!-- ============================================================== -->
+        <!-- sidebar toggle -->
+        <!-- ============================================================== -->
+        
+        <button mat-icon-button (click)="toggleMenu()" value="sidebarclosed">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span fxFlex></span>
+        <!-- ============================================================== -->
+            <!-- Profile - style you can find in header.scss -->
+            <!-- ============================================================== -->
+            <a href="https://wrappixel.com/templates/materialpro-angular-dashboard/" class=" m-r-20 hidden-sm-up" mat-raised-button color="warn"></a>
+            <button [matMenuTriggerFor]="profile" mat-icon-button class="m-r-5"> <ngx-avatar size="40" [name]="getUserName()" value="30%" ></ngx-avatar> </button>
+            <mat-menu #profile="matMenu" class="mymegamenu">
+                <button mat-menu-item>
+                    <mat-icon>settings</mat-icon> Settings </button>
+                <button mat-menu-item>
+                    <mat-icon>account_box</mat-icon> Profile </button>
+                <button mat-menu-item>
+                    <mat-icon>notifications_off</mat-icon> Disable notifications </button>
+                <button mat-menu-item>
+                    <mat-icon>exit_to_app</mat-icon> Sign Out </button>
+            </mat-menu>
+    </mat-toolbar>
+    <!-- ============================================================== -->
+    <!-- End Topbar - style you can find in pages.scss -->
+    <!-- ============================================================== -->       
+
+

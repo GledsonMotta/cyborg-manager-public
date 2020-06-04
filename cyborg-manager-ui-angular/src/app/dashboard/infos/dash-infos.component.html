@@ -1,0 +1,96 @@
+<!-- ============================================================== -->
+<!-- Simple four boxes Row -->
+<!-- ============================================================== -->
+<div fxLayout="row wrap">
+        <!-- column -->    
+        <div fxFlex.gt-lg="25" fxFlex.gt-md="25"  fxFlex.gt-xs="100" fxFlex="100">
+           <mat-card>
+               <mat-card-content>
+                       <div class="d-flex no-block">
+                           <div class="m-r-10 no-shrink">
+                               <button mat-fab="" mat-card-icon="" class="mat-focus-indicator shadow-none bg-primary mat-fab mat-button-base mat-warn">
+                                       <mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">build</mat-icon>
+                               </button>
+                           </div>
+                           <div>      
+                                <div class="progress-loader dash-info" [hidden]="!dashService.attribute.loading"> 
+                                        <mat-progress-spinner [mode]="'indeterminate'" diameter="30" color="warn">
+                                        </mat-progress-spinner>                         
+                                </div>                          
+                               <h3 class="m-0" [hidden]="dashService.attribute.loading">{{dashService.attribute.list.length}}</h3>
+                               <h6 class="text-muted m-0">Available Attributes</h6>
+                           </div>
+                       </div>
+                       
+               </mat-card-content>
+           </mat-card>
+       </div>
+       <!-- column -->     <!-- column -->    
+       <div fxFlex.gt-lg="25" fxFlex.gt-md="25"  fxFlex.gt-xs="100" fxFlex="100">
+            <mat-card>
+                    <mat-card-content>
+                            <div class="d-flex no-block">
+                                <div class="m-r-10 no-shrink">
+                                    <button mat-fab="" mat-card-icon="" class="mat-focus-indicator shadow-none bg-info bg-success mat-fab mat-button-base mat-accent">
+                                            <mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">settings</mat-icon>
+                                    </button>
+                                </div>
+                                <div>
+                                    <div class="progress-loader dash-info" [hidden]="!dashService.attributeType.loading"> 
+                                            <mat-progress-spinner [mode]="'indeterminate'" diameter="30" color="warn">
+                                            </mat-progress-spinner>                         
+                                    </div>  
+                                    <h3 class="m-0" [hidden]="dashService.attributeType.loading">{{dashService.attributeType.list.length}}</h3>
+                                    <h6 class="text-muted m-0">Attribute Types</h6>
+                                </div>
+                            </div>
+                    </mat-card-content>
+                </mat-card>
+       </div>
+       <!-- column -->     <!-- column -->    
+       <div fxFlex.gt-lg="25" fxFlex.gt-md="25"  fxFlex.gt-xs="100" fxFlex="100">
+            <mat-card>
+                    <mat-card-content>
+                            <div class="d-flex no-block">
+                                <div class="m-r-10 no-shrink">
+                                    <button mat-fab="" mat-card-icon="" class="mat-focus-indicator shadow-none bg-inverse bg-warning mat-fab mat-button-base mat-accent">
+                                            <mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">accessibility</mat-icon>
+                                    </button>
+                                </div>
+                                <div>
+                                    <div class="progress-loader dash-info" [hidden]="!dashService.robot.loading"> 
+                                            <mat-progress-spinner [mode]="'indeterminate'" diameter="30" color="warn">
+                                            </mat-progress-spinner>                         
+                                    </div> 
+                                    <h3 class="m-0" [hidden]="dashService.robot.loading">{{dashService.robot.list.length}}</h3>
+                                    <h6 class="text-muted m-0">Robot Models</h6>
+                                </div>
+                            </div>
+                    </mat-card-content>
+                </mat-card>
+       </div>
+       <!-- column -->     
+       <!-- column -->    
+       <div fxFlex.gt-lg="25" fxFlex.gt-md="25"  fxFlex.gt-xs="100" fxFlex="100">
+            <mat-card>
+                    <mat-card-content>
+                            <div class="d-flex no-block">
+                                <div class="m-r-10 no-shrink">
+                                    <button mat-fab="" mat-card-icon="" class="mat-focus-indicator shadow-none bg-inverse bg-success mat-fab mat-button-base mat-accent">
+                                            <mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">directions_run</mat-icon>
+                                    </button>
+                                </div>
+                                <div>
+                                    <div class="progress-loader dash-info" [hidden]="!dashService.rbInstance.loading"> 
+                                            <mat-progress-spinner [mode]="'indeterminate'" diameter="30" color="warn">
+                                            </mat-progress-spinner>                         
+                                    </div> 
+                                    <h3 class="m-0" [hidden]="dashService.rbInstance.loading">{{dashService.rbInstance.list.length}}</h3>
+                                    <h6 class="text-muted m-0">Robot Instances</h6>
+                                </div>
+                            </div>
+                    </mat-card-content>
+                </mat-card>
+       </div>
+       <!-- column -->    
+   </div>

@@ -1,0 +1,49 @@
+.breadcrumb {
+    background: none;
+    font-size: .8em;
+    margin: 0;
+   
+    li{
+        list-style: none;
+        //float: left;
+        margin: 0px;
+
+        a, span {
+            color: #1e88e5;
+        }
+    }    
+    li::after {
+        content: "\276F";
+        font-family: themify;
+        color: #99abb4;
+        font-size: 13px;
+        padding-right: .5rem;
+    }
+    li:last-child{
+        a, span {
+            color: darkgrey;
+            cursor: auto;
+        }
+    }
+    li:last-child::after {
+       content: ''
+    }
+}
+
+.breadcrumb-label{
+    padding-inline-start: 20px;
+}
+
+.page-breadcrumb {
+    background: #fff;
+
+    .breadcrumb{
+        .breadcrumb-item{
+            font-size: 14px;
+
+            a{
+                padding-right: .5rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+<div fxLayout="row wrap">
+        <!-- column -->    
+        <div fxFlex.gt-lg="66" fxFlex.gt-md="66" fxFlex.gt-xs="100" fxFlex="100">
+            <mat-card>
+                <mat-card-content>
+                    <div class="d-flex flex-wrap">
+                        <mat-card-title>Robot Activity per Month</mat-card-title>                                                    
+                    </div>    
+                    <hr>
+                    <div class="barchrt" style="height:360px;">                        
+                            <haeralis-chart 
+                                [chartOptions]="chartOptions">
+                            </haeralis-chart>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div> 
+        <div fxFlex.gt-lg="33" fxFlex.gt-md="33"  fxFlex.gt-xs="100" fxFlex="100">
+            <mat-card>
+                <mat-card-content>
+                    <div class="d-flex flex-wrap">
+                            <mat-card-title>Most Used Attribute Types</mat-card-title>                                                    
+                    </div>
+                    <hr>
+                    <div class="barchrt" style="height:360px;">                        
+                            <haeralis-chart 
+                                [chartOptions]="chartOptionsPie">
+                            </haeralis-chart>
+                    </div>                   
+                </mat-card-content>               
+            </mat-card>
+        </div>       
+    </div>

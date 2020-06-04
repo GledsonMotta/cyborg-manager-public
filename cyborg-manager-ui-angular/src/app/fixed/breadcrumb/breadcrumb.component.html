@@ -1,0 +1,16 @@
+<div class="page-breadcrumb p-t-20 p-b-20 p-l-30 p-r-30">
+  <div fxlayout="row wrap" style="flex-flow: row wrap; box-sizing: border-box; display: flex;">
+    <div fxflex.gt-sm="60" fxflex.gt-xs="60" fxflex="100" class="breadcrumb-label align-self-center" style="flex: 1 1 60%; box-sizing: border-box; max-width: 60%;"> 
+        <span class="breadcrumb-item">
+          <h4 class="page-title text-themecolor m-0" *ngIf="activeBreadcrumb" >{{ activeBreadcrumb.label }}</h4>
+        </span>        
+    </div>
+    <div fxflex.gt-sm="40" fxflex.gt-xs="40" fxflex="100" class="align-self-center" style="flex: 1 1 40%; box-sizing: border-box; max-width: 40%;">
+        <ul class="breadcrumb d-flex align-items-center float-right float-sm-left">
+          <li *ngFor="let breadcrumb of breadcrumbs" class="breadcrumb-item">
+            <a [routerLink]="breadcrumb.url" routerLinkActive="router-link-active">{{ breadcrumb.label }}</a>           
+          </li>
+        </ul>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,74 @@
+<!-- ============================================================== -->
+<!-- sidebar -->
+<!-- ============================================================== -->
+<perfect-scrollbar [config]="config">
+<div class="user-profile" style="background: url(assets/images/background/user-info.jpg) no-repeat;">        
+    <div class="p-20 position-relative">
+        <h2 class="card-title text-white m-0 text-paytone font-bold">Cyborg</h2> 
+        <h2 class="card-title text-white m-0 text-paytone font-bold text-right">Commander</h2>                
+    </div>
+    <!-- User profile text-->
+    <!-- ============================================================== -->
+    <!-- Profile - style you can find in header.scss -->
+    <!-- ============================================================== -->
+    <div class="profile-text"><a [matMenuTriggerFor]="sdprofile" class=""> {{getUserName()}} <i class="ti-angle-down font-12 m-l-5"></i></a></div>
+    <mat-menu #sdprofile="matMenu" class="mymegamenu">
+        <button mat-menu-item>
+            <mat-icon>settings</mat-icon> Settings </button>
+        <button mat-menu-item>
+            <mat-icon>account_box</mat-icon> Profile </button>
+        <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon> Disable notifications </button>
+        <button mat-menu-item>
+            <mat-icon>exit_to_app</mat-icon> Sign Out </button>
+    </mat-menu>
+    
+</div>
+
+    <mat-nav-list appAccordion>
+            <mat-list-item appAccordionLink *ngFor="let menuitem of menuItems.getMenuitem()" routerLinkActive="selected">
+                <a class="" appAccordionToggle [routerLink]="['/', menuitem.state]" *ngIf="menuitem.type === 'link'" [ngClass]=" menuitem.child?'':'no-arrow' ">
+                    <mat-icon>{{ menuitem.icon }}</mat-icon> 
+                    <span>{{ menuitem.name }}</span> 
+                    <span fxFlex></span> 
+                    <mat-icon role="img" class="mat-icon notranslate dd-icon material-icons mat-icon-no-color" aria-hidden="true">keyboard_arrow_down</mat-icon> 
+                </a>  
+                <mat-nav-list class="sub-item" appAccordion *ngIf="menuitem.child">
+                    <mat-list-item *ngFor="let child of menuitem.child">
+                            <a class="relative" routerLinkActive="selected" [routerLink]="[menuitem.state, child.state]" *ngIf="child.type === 'link'">                            
+                                <span>{{ child.name }}</span> 
+                                <span fxFlex></span>                             
+                            </a>                            
+                    </mat-list-item> 
+                </mat-nav-list>                         
+            </mat-list-item>
+        
+    </mat-nav-list>
+    <!-- <mat-nav-list appAccordion>
+            <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Personal data
+          </mat-panel-title>          
+        </mat-expansion-panel-header>    
+        <mat-form-field>
+          <input matInput placeholder="First name">
+        </mat-form-field>
+    
+        <mat-form-field>
+          <input matInput placeholder="Age">
+        </mat-form-field>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Self aware panel
+          </mat-panel-title>         
+        </mat-expansion-panel-header>
+        <p>I'm visible because I am open</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+          </mat-nav-list> -->
+</perfect-scrollbar>
+

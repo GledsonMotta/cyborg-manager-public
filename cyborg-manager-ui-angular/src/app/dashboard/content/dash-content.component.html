@@ -1,0 +1,77 @@
+<!-- ============================================================== -->
+<!-- Image Card row-->
+<!-- ============================================================== -->
+<div fxLayout="row wrap">
+        <!-- Card column -->
+        <div fxFlex.gt-lg="25" fxFlex.gt-md="40" fxFlex.gt-xs="100" fxFlex="100">
+             <mat-card class="oh little-profile">
+                <div class="p-20 bg-info position-relative">
+                    <h4 class="card-title text-white m-0">Attributes List</h4>                
+                </div>
+                <mat-card-content>    
+                    <perfect-scrollbar [config]="config">              
+                        <div class="message-widget contact-widget" style="max-height: 300px">
+                            <table class="table table-striped">
+                                <thead>                            
+                                <th>Name</th>
+                                <th>Type</th>                      
+                                </thead>
+                                <tbody>
+                                <tr *ngFor="let attribute of dashService.attribute.list">                               
+                                    <td>{{attribute.name}}</td>
+                                    <td>{{attribute.attributeType.name}}</td>                        
+                                </tr>
+                                </tbody>
+                            </table>   
+                        </div>
+                    </perfect-scrollbar>
+                </mat-card-content>
+            </mat-card>
+
+            <mat-card class="oh little-profile">
+                    <div class="p-20 bg-warning position-relative">
+                        <h4 class="card-title text-white m-0">Available Models</h4>                
+                    </div>
+                    <mat-card-content>  
+                        <perfect-scrollbar [config]="config">                      
+                            <div class="message-widget contact-widget" style="max-height: 300px">
+                                <table class="table table-striped">
+                                    <thead>    
+                                        <th>Model</th>                         
+                                        <th>Name</th>    
+                                    </thead> 
+                                    <tbody>
+                                    <tr *ngFor="let rb of dashService.robot.list">   
+                                        <td>{{rb.rbModel.name}}</td>                              
+                                        <td>{{rb.name}}</td>                                                          
+                                    </tr>
+                                    </tbody>
+                                </table>   
+                            </div>
+                        </perfect-scrollbar>
+                    </mat-card-content>
+            </mat-card>
+        </div>        
+        <div fxFlex.gt-lg="75" fxFlex.gt-md="60" fxFlex.gt-xs="100" fxFlex="100">
+            <mat-card>
+                <mat-tab-group>
+                    <!-- Tab 1 -->
+                    <mat-tab label="Activity">
+                        <mat-card-content>
+                            <div class="d-flex no-blcok" style="height: 300px">
+                                
+                            </div>
+                        </mat-card-content>
+                    </mat-tab>
+                    <!-- End Tab 1 -->
+                    <!-- Tab 2 -->
+                    <mat-tab label="Processing">
+                        <mat-card-content>
+                            <mat-card-title>Processing Status</mat-card-title>
+                           
+                        </mat-card-content>
+                    </mat-tab>
+                </mat-tab-group>
+            </mat-card>
+        </div>
+    </div>
