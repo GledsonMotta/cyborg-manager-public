@@ -6,6 +6,8 @@
 
 Angular aplication that will act as a UI for creating, instatiating, tracking and managing sets of Machines, Robots, Cyborgs of different types that will fight among themselves virtually.
 This UI will communicate with api's of different languages/platforms like Java, NodeJS and PEGA, all disposed in the cloud, except PEGA Platform that will be a personal edition installed in my machine only available for REST consumption.
+Data will be stored in the cloud using the NoSQL database MongoDB, served by MongoDB Atlas.
+
 
 Print of the Initial UI Version:
 
